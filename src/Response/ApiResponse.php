@@ -100,6 +100,7 @@ class ApiResponse implements \ArrayAccess
         return isset($this->response[$offset]);
     }
 
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         if (!isset($this->response[$offset])) {
