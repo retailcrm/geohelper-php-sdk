@@ -15,7 +15,7 @@ Use [API documentation](http://geohelper.info/ru/documentation)
 
 2) Run into your project directory:
 ```bash
-composer require dmamontov/geohelper-api-client-php ~1.0.0
+composer require retailcrm/geohelper-php-sdk ~1.0.0
 ```
 
 If you have not used `composer` before, include autoloader into your project.
