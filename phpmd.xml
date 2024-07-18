@@ -20,6 +20,9 @@
         <exclude name="ShortVariable" />
         <exclude name="LongVariable" />
     </rule>
+    <rule ref="rulesets/unusedcode.xml">
+        <exclude name="UnusedFormalParameter" />
+    </rule>
 
 
     <rule ref="rulesets/codesize.xml/TooManyPublicMethods">

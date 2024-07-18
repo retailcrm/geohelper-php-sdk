@@ -12,7 +12,7 @@ class ClientTest extends TestCase
     protected const TEST_DATA = [
         'data' => 'test'
     ];
-    protected const TEST_API_HOST = 'http://geohelper.test/';
+    protected const TEST_API_HOST = 'https://geohelper.test/';
     private Client $client;
 
     public function setUp(): void

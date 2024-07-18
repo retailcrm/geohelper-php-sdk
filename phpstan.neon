@@ -3,3 +3,8 @@ parameters:
     paths:
         - src
         - tests
+    ignoreErrors:
+    		-
+    		    identifier: method.childReturnType
+    		    path: src/Response/ApiResponse.php
+    		    reportUnmatched: false
