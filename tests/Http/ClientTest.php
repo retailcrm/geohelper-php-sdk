@@ -10,12 +10,12 @@ class ClientTest extends TestCase
 {
     protected const METHOD = '/test';
     protected const TEST_DATA = [
-        'data' => 'test'
+        'data' => 'test',
     ];
     protected const TEST_API_HOST = 'https://geohelper.test/';
     private Client $client;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
         $this->client = new Client((new PockBuilder())->getClient(), self::TEST_API_HOST);

@@ -8,10 +8,10 @@ class ApiResponse implements \ArrayAccess
 {
     protected int $statusCode;
 
-    /** @var array<mixed> $response */
+    /** @var array<mixed> */
     protected array $response;
 
-    public function __construct(int $statusCode, string $responseBody = null)
+    public function __construct(int $statusCode, ?string $responseBody = null)
     {
         $this->statusCode = $statusCode;
 
@@ -100,6 +100,10 @@ class ApiResponse implements \ArrayAccess
         return isset($this->response[$offset]);
     }
 
+    /**
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         if (!isset($this->response[$offset])) {

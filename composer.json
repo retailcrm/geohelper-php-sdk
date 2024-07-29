@@ -17,7 +17,7 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.1",
+        "php": "7.4|^8.1",
         "ext-json": "*",
         "nyholm/psr7": "^1.4",
         "psr/http-client": "^1.0"
@@ -28,7 +28,8 @@
         "phpstan/phpstan": "^1.11",
         "phpmd/phpmd": "^2.15",
         "squizlabs/php_codesniffer": "^3.10",
-        "friendsofphp/php-cs-fixer": "^3.59"
+        "friendsofphp/php-cs-fixer": "^3.59",
+        "retailcrm/php-code-style": "^1.0"
     },
     "support": {
         "email": "support@retailcrm.ru"

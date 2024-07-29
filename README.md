@@ -6,8 +6,7 @@ Use [API documentation](http://geohelper.info/ru/documentation)
 
 ## Requirements
 
-* PHP 5.3 and above
-* PHP's cURL support
+* PHP 7.4 and higher
 
 ## Install
 
@@ -28,7 +27,11 @@ require 'path/to/vendor/autoload.php';
 ### Get countries
 
 ```php
+
+$clientInterface = new \GuzzleHttp\Client();
+
 $client = new RetailCrm\Geohelper\ApiClient(
+    $clientInterface,
     'api_key'
 );
 

@@ -21,13 +21,11 @@ class Client
     protected string $baseUrl;
 
     /**
-     * @var array<mixed> $defaultParameters
+     * @var array<mixed>
      */
     protected array $defaultParameters;
 
     /**
-     * @param ClientInterface $client
-     * @param string $baseUrl
      * @param array<mixed> $defaultParameters
      */
     public function __construct(
@@ -47,9 +45,8 @@ class Client
     }
 
     /**
-     * @param string $methodUrl
      * @param array<mixed> $requestData
-     * @return RequestInterface
+     *
      * @throws JsonException
      */
     public function buildPostRequest(string $methodUrl, array $requestData = []): RequestInterface
@@ -69,9 +66,7 @@ class Client
     }
 
     /**
-     * @param string $methodUrl
      * @param array<mixed> $parameters
-     * @return RequestInterface
      */
     public function buildGetRequest(string $methodUrl, array $parameters): RequestInterface
     {

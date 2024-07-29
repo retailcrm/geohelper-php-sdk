@@ -29,6 +29,7 @@ class ApiClient
      * @param array<mixed> $locale
      * @param array<mixed> $pagination
      * @param array<mixed> $order
+     *
      * @return array<mixed>
      */
     private function getParameters(
@@ -54,6 +55,7 @@ class ApiClient
         if (count($order)) {
             $parameters['order'] = $order;
         }
+
         return $parameters;
     }
 
@@ -62,6 +64,7 @@ class ApiClient
      * @param array<mixed> $locale
      * @param array<mixed> $pagination
      * @param array<mixed> $order
+     *
      * @throws ClientExceptionInterface
      */
     public function citiesList(
@@ -69,7 +72,7 @@ class ApiClient
         array $locale = ['lang' => 'ru'],
         array $pagination = ['page' => 1, 'limit' => 20],
         array $order = []
-    ): Response\ApiResponse {
+    ): ApiResponse {
         return $this->client->makeRequest(
             $this->client->buildGetRequest(
                 '/cities',
@@ -83,6 +86,7 @@ class ApiClient
      * @param array<mixed> $locale
      * @param array<mixed> $pagination
      * @param array<mixed> $order
+     *
      * @throws ClientExceptionInterface
      */
     public function countriesList(
@@ -90,7 +94,7 @@ class ApiClient
         array $locale = ['lang' => 'ru'],
         array $pagination = ['page' => 1, 'limit' => 20],
         array $order = []
-    ): Response\ApiResponse {
+    ): ApiResponse {
         return $this->client->makeRequest(
             $this->client->buildGetRequest(
                 '/countries',
@@ -99,12 +103,12 @@ class ApiClient
         );
     }
 
-
     /**
      * @param array<mixed> $filter
      * @param array<mixed> $locale
      * @param array<mixed> $pagination
      * @param array<mixed> $order
+     *
      * @throws ClientExceptionInterface
      */
     public function regionsList(
@@ -112,7 +116,7 @@ class ApiClient
         array $locale = ['lang' => 'ru'],
         array $pagination = ['page' => 1, 'limit' => 20],
         array $order = []
-    ): Response\ApiResponse {
+    ): ApiResponse {
         return $this->client->makeRequest(
             $this->client->buildGetRequest(
                 '/regions',
@@ -126,6 +130,7 @@ class ApiClient
      * @param array<mixed> $locale
      * @param array<mixed> $pagination
      * @param array<mixed> $order
+     *
      * @throws ClientExceptionInterface
      */
     public function streetsList(
@@ -133,7 +138,7 @@ class ApiClient
         array $locale = ['lang' => 'ru'],
         array $pagination = ['page' => 1, 'limit' => 20],
         array $order = []
-    ): Response\ApiResponse {
+    ): ApiResponse {
         return $this->client->makeRequest(
             $this->client->buildGetRequest(
                 '/streets',
@@ -145,12 +150,13 @@ class ApiClient
     /**
      * @param array<mixed> $filter
      * @param array<mixed> $locale
+     *
      * @throws ClientExceptionInterface
      */
     public function phoneDataGet(
         array $filter = [],
         array $locale = ['lang' => 'ru']
-    ): Response\ApiResponse {
+    ): ApiResponse {
         return $this->client->makeRequest(
             $this->client->buildGetRequest(
                 '/phone-data',
@@ -162,14 +168,14 @@ class ApiClient
     /**
      * @param array<mixed> $filter
      * @param array<mixed> $locale
-     * @return ApiResponse
+     *
      * @throws ClientExceptionInterface
      * @throws JsonException
      */
     public function phoneDataList(
         array $filter = [],
         array $locale = ['lang' => 'ru']
-    ): Response\ApiResponse {
+    ): ApiResponse {
         return $this->client->makeRequest(
             $this->client->buildPostRequest(
                 '/phone-collection-data',
@@ -183,6 +189,7 @@ class ApiClient
      * @param array<mixed> $locale
      * @param array<mixed> $pagination
      * @param array<mixed> $order
+     *
      * @throws ClientExceptionInterface
      */
     public function serviceLocalityGet(
@@ -190,7 +197,7 @@ class ApiClient
         array $locale = ['lang' => 'ru'],
         array $pagination = ['page' => 1, 'limit' => 20],
         array $order = []
-    ): Response\ApiResponse {
+    ): ApiResponse {
         return $this->client->makeRequest(
             $this->client->buildGetRequest(
                 '/service-locality',
@@ -202,12 +209,13 @@ class ApiClient
     /**
      * @param array<mixed> $filter
      * @param array<mixed> $locale
+     *
      * @throws ClientExceptionInterface
      */
     public function postCodeGet(
         array $filter = [],
         array $locale = ['lang' => 'ru']
-    ): Response\ApiResponse {
+    ): ApiResponse {
         return $this->client->makeRequest(
             $this->client->buildGetRequest(
                 '/post-code',
